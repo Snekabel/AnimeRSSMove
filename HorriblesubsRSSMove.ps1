@@ -1,7 +1,7 @@
-#===============================================
+#=================================================
 # HorriblesubsRSSMove v1.0 by Neo
-# HorriblesubsRSSMove.ps1 -InputFile <file path>
-#===============================================
+# HorriblesubsRSSMove.ps1 -InputFile '<file path>'
+#=================================================
 ### Parameters, Title, Checks, Variables
 # Set parameters
 Param(
@@ -22,7 +22,7 @@ $InputFileName = Split-Path $InputFile -Leaf
 $OutputPath = "Q:\Shared\Anime\Series\Airing\"
 $InputFileStartTrim = "[HorribleSubs] "
 $InputFileEndCharacter = "-"
-$FolderName = $InputFileName.Substring(0, $InputFileName.LastIndexOf($InputFileEndCharacter)).TrimStart($InputFileStartTrim)
+$FolderName = $InputFileName.Substring(0, $InputFileName.LastIndexOf($InputFileEndCharacter)).TrimStart($InputFileStartTrim).Trim()
 $FolderPath = $OutputPath + $FolderName
 $FolderPathFileName = $FolderPath + "\" + $InputFileName
 
