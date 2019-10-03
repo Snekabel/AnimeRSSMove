@@ -1,6 +1,6 @@
 #=================================================
-# HorriblesubsRSSMove v1.0 by Neo
-# HorriblesubsRSSMove.ps1 -InputFile '<file path>'
+# HorribleSubsRSSMove v1.0 by Neo
+# HorribleSubsRSSMove.ps1 -InputFile '<file path>'
 #=================================================
 ### Parameters, Title, Checks, Variables
 # Set parameters
@@ -10,7 +10,7 @@ Param(
 )
 
 # Set PowerShell title.
-$host.ui.RawUI.WindowTitle = "HorriblesubsRSSMove v1.0 by Neo"
+$host.ui.RawUI.WindowTitle = "HorribleSubsRSSMove v1.0 by Neo"
 
 # Wait 5 seconds to bypass errors created by other software.
 Start-Sleep -Seconds 5
