@@ -31,5 +31,10 @@ If (-Not (Test-Path $FolderPath)) {
 	New-Item -Path $OutputPath -Name $FolderName -ItemType "directory"
 }
 
+# Check if file already exists in the path, if it does delete it.
+If ([System.IO.File]::Exists($FolderPathFileName)) {
+	[System.IO.File]::Delete($FolderPathFileName)
+}
+
 # Move file to new folder.
 [System.IO.File]::Move($Inputfile, $FolderPathFileName)
