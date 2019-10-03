@@ -12,6 +12,9 @@ Param(
 # Set PowerShell title.
 $host.ui.RawUI.WindowTitle = "HorriblesubsRSSMove v1.0 by Neo"
 
+# Wait 5 seconds to bypass errors created by other software.
+Start-Sleep -Seconds 5
+
 # Check if input file exists, if it doesn't exit script.
 If (-Not ([System.IO.File]::Exists($InputFile))) {
 	exit
