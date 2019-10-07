@@ -23,7 +23,7 @@ If (-Not ([System.IO.File]::Exists($InputFile))) {
 # Default variables.
 $InputFileName = Split-Path $InputFile -Leaf
 $OutputPath = "Q:\Shared\Anime\Series\Airing\"
-$InputFileStartTrim = "[HorribleSubs] "
+$InputFileStartTrim = "[HorribleSubs]"
 $InputFileEndCharacter = "-"
 $FolderName = $InputFileName.Substring(0, $InputFileName.LastIndexOf($InputFileEndCharacter)).TrimStart($InputFileStartTrim).Trim()
 $FolderPath = $OutputPath + $FolderName
