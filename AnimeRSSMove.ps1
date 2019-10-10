@@ -1,12 +1,13 @@
-#==========================================
+#=============================================================================
 # AnimeRSSMove v1.0 by Neo
-# AnimeRSSMove.ps1 -InputFile '<file path>'
-#==========================================
+# AnimeRSSMove.ps1 -InputFile '<file path>' -OutputPath = '<file destination>'
+#=============================================================================
 ### Parameters, Title, Checks, Variables
 # Set parameters
 Param(
-  [Parameter(Mandatory=$true, Position=0)]
-  [string]$InputFile = ""
+	[Parameter(Mandatory=$true, Position=0)]
+	[string]$InputFile = ""
+	[string]$OutputPath = ""
 )
 
 # Set PowerShell title.
@@ -22,7 +23,6 @@ If (-Not ([System.IO.File]::Exists($InputFile))) {
 
 # Default variables.
 $InputFileName = Split-Path $InputFile -Leaf
-$OutputPath = "Q:\Shared\Anime\Series\Airing\"
 $InputFileStartSubstring = $InputFileName.IndexOf("]")
 $InputFileEndSubstring = $InputFileName.LastIndexOf("-")
 $FolderName = $InputFileName.Substring(0, $InputFileEndSubstring).Substring($InputFileStartSubstring+1).Trim()
