@@ -1,7 +1,7 @@
-#=================================================
+#==========================================
 # AnimeRSSMove v1.0 by Neo
 # AnimeRSSMove.ps1 -InputFile '<file path>'
-#=================================================
+#==========================================
 ### Parameters, Title, Checks, Variables
 # Set parameters
 Param(
