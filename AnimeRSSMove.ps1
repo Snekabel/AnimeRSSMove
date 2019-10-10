@@ -6,7 +6,8 @@
 # Set parameters
 Param(
 	[Parameter(Mandatory=$true, Position=0)]
-	[string]$InputFile = ""
+	[string]$InputFile = "",
+	[Parameter(Mandatory=$true, Position=1)]
 	[string]$OutputPath = ""
 )
 
@@ -18,6 +19,11 @@ Start-Sleep -Seconds 5
 
 # Check if input file exists, if it doesn't exit script.
 If (-Not ([System.IO.File]::Exists($InputFile))) {
+	exit
+}
+
+# Check if output path exists, if it doesn't exit script.
+If (-Not (Test-Path $OutputPath)) {
 	exit
 }
 
