@@ -10,7 +10,7 @@ Param(
 )
 
 # Set PowerShell title.
-$host.ui.RawUI.WindowTitle = "HorribleSubsRSSMove v1.0 by Neo"
+$host.ui.RawUI.WindowTitle = "AnimeRSSMove v1.0 by Neo"
 
 # Wait 5 seconds to bypass errors created by other software.
 Start-Sleep -Seconds 5
