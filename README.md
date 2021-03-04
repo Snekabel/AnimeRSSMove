@@ -3,4 +3,4 @@ Made to move input anime episodes from RSS feed from torrent client to output fo
 
 I use this with Tixati with the file completion shell command:
 
-file:powershell C:\Scripts\AnimeRSSMove.ps1 -OutputPath 'Q:\Shared\Anime\Series\Airing' -InputFile '$basepath$name$ext'
+file:powershell "C:\Scripts\AnimeRSSMove.ps1 -OutputPath X:\ -InputFile \"$basepath$name$ext\""
