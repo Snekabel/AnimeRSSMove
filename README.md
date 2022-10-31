@@ -1,5 +1,5 @@
 # AnimeRSSMove
-Made to move input anime episodes from RSS feed from torrent client to output folder with anime name automatically.
+Made to move input anime episodes from torrent client downloading from RSS feed to an automatically created subdirectory with proper anime name.
 
 I use this with Tixati with the file completion shell command:
 
