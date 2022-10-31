@@ -50,28 +50,28 @@ If ($InputFile) {
 	$FolderPath = $TrueOutputPath + "\" + $FolderName
 	$FolderPathFileName = $FolderPath + "\" + $InputFileName
 
-	# Replace "SX" with "Season X" to circumvent any problems in Plex.
-	$FolderPath = $FolderPath -replace "S2", "Season 2"
-	$FolderName = $FolderName -replace "S2", "Season 2"
-	$FolderPathFileName = $FolderPathFileName -replace "S2", "Season 2"
-	$FolderPath = $FolderPath -replace "S3", "Season 3"
-	$FolderName = $FolderName -replace "S3", "Season 3"
-	$FolderPathFileName = $FolderPathFileName -replace "S3", "Season 3"
-	$FolderPath = $FolderPath -replace "S4", "Season 4"
-	$FolderName = $FolderName -replace "S4", "Season 4"
-	$FolderPathFileName = $FolderPathFileName -replace "S4", "Season 4"
-	$FolderPath = $FolderPath -replace "S5", "Season 5"
-	$FolderName = $FolderName -replace "S5", "Season 5"
-	$FolderPathFileName = $FolderPathFileName -replace "S5", "Season 5"
-	$FolderPath = $FolderPath -replace "S6", "Season 6"
-	$FolderName = $FolderName -replace "S6", "Season 6"
-	$FolderPathFileName = $FolderPathFileName -replace "S6", "Season 6"
-	$FolderPath = $FolderPath -replace "S7", "Season 7"
-	$FolderName = $FolderName -replace "S7", "Season 7"
-	$FolderPathFileName = $FolderPathFileName -replace "S7", "Season 7"
-	$FolderPath = $FolderPath -replace "S8", "Season 8"
-	$FolderName = $FolderName -replace "S8", "Season 8"
-	$FolderPathFileName = $FolderPathFileName -replace "S8", "Season 8"
+	# Replace "X" with "Y" to circumvent any problems in Plex.
+	$FolderPath = $FolderPath.replace("S2", "Season 2")
+	$FolderName = $FolderName.replace("S2", "Season 2")
+	$FolderPathFileName = $FolderPathFileName.replace("S2", "Season 2")
+	$FolderPath = $FolderPath.replace("S3", "Season 3")
+	$FolderName = $FolderName.replace("S3", "Season 3")
+	$FolderPathFileName = $FolderPathFileName.replace("S3", "Season 3")
+	$FolderPath = $FolderPath.replace("S4", "Season 4")
+	$FolderName = $FolderName.replace("S4", "Season 4")
+	$FolderPathFileName = $FolderPathFileName.replace("S4", "Season 4")
+	$FolderPath = $FolderPath.replace("S5", "Season 5")
+	$FolderName = $FolderName.replace("S5", "Season 5")
+	$FolderPathFileName = $FolderPathFileName.replace("S5", "Season 5")
+	$FolderPath = $FolderPath.replace("S6", "Season 6")
+	$FolderName = $FolderName.replace("S6", "Season 6")
+	$FolderPathFileName = $FolderPathFileName.replace("S6", "Season 6")
+	$FolderPath = $FolderPath.replace("S7", "Season 7")
+	$FolderName = $FolderName.replace("S7", "Season 7")
+	$FolderPathFileName = $FolderPathFileName.replace("S7", "Season 7")
+	$FolderPath = $FolderPath.replace("S8", "Season 8")
+	$FolderName = $FolderName.replace("S8", "Season 8")
+	$FolderPathFileName = $FolderPathFileName.replace("S8", "Season 8")
 
 	# Check if folder path exists, if it doesn't create folder.
 	If (-Not (Test-Path $FolderPath)) {
