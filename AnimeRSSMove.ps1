@@ -60,8 +60,6 @@ If ($InputFile) {
 
 	# Script variables.
 	$InputFileName = Split-Path $InputFile -Leaf
-	$InputFileStartSubstring = $InputFileName.IndexOf("]")
-	$InputFileEndSubstring = $InputFileName.LastIndexOf(" - ")
 	# Welcome to REGEX HELL.
 	$FolderName = $InputFileName -replace "\d+(\.[a-zA-Z]{3,4})$", "" -replace '(\d+)(\s\[TV\sx264\s10bit\s1080p\sAAC\s2.0\sDual\]).*', '' -replace '( - \d{1,2}(S\d{1,2}E\d{1,2})?$).*', '' -replace '(\d+)(\s\(BD\s1080p\)\.[mkv|avi|mp4]+)', '' -replace '(_\d+v?\d*).*', '' -replace '_', ' ' -replace " - SP\d+", "" -replace '\[.*?\]', '' -replace '\.mkv|\.avi|\.mp4', '' -replace "\.", " " -replace '\(.*?\)', '' -replace '( - \d{1,2}(S\d{1,2}E\d{1,2})?$).*', '' -replace '( - S\d+E\d+| - \d+).*', '' -replace '(S\d+E\d+).*', '' -replace '(.(SP|EP)\d+)*', '' -replace '(e\d+.*)', '' -replace '(\sep\s*\d+).*', '' -replace '( -$)', '' -replace '( - $)', '' -replace '- S\d+E?\b', ''
 	$FolderName = $FolderName.Trim()
@@ -123,8 +121,6 @@ If ($InputPath) {
 
 		# Script variables.
 		$InputFileName = Split-Path $Item -Leaf
-		$InputFileStartSubstring = $InputFileName.IndexOf("]")
-		$InputFileEndSubstring = $InputFileName.LastIndexOf(" - ")
 		# Welcome to REGEX HELL.
 		$FolderName = $InputFileName -replace "\d+(\.[a-zA-Z]{3,4})$", "" -replace '(\d+)(\s\[TV\sx264\s10bit\s1080p\sAAC\s2.0\sDual\]).*', '' -replace '( - \d{1,2}(S\d{1,2}E\d{1,2})?$).*', '' -replace '(\d+)(\s\(BD\s1080p\)\.[mkv|avi|mp4]+)', '' -replace '(_\d+v?\d*).*', '' -replace '_', ' ' -replace " - SP\d+", "" -replace '\[.*?\]', '' -replace '\.mkv|\.avi|\.mp4', '' -replace "\.", " " -replace '\(.*?\)', '' -replace '( - \d{1,2}(S\d{1,2}E\d{1,2})?$).*', '' -replace '( - S\d+E\d+| - \d+).*', '' -replace '(S\d+E\d+).*', '' -replace '(.(SP|EP)\d+)*', '' -replace '(e\d+.*)', '' -replace '(\sep\s*\d+).*', '' -replace '( -$)', '' -replace '( - $)', '' -replace '- S\d+E?\b', ''
 		$FolderName = $FolderName.Trim()
